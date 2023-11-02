@@ -15,21 +15,18 @@ for (a = 0; a < arrayNumber.length; a++) {
 console.log(""); //This creates a space on the console
 
 // b. Convert all the strings to title caps in a string array
-console.log("B. Convert to capital letters:-");
-let title = [
-  "html",
-  "css",
-  "javascript",
-  "mongo db",
-  "express",
-  "react",
-  "node",
-];
-for (b = 0; b < title.length; b++) {
-  (function (programs) {
-    console.log(programs.toUpperCase());
-  })(title[b]);
-}
+let title = ["javaScript iS a programming lanFUage"];
+
+(function caps(wor){
+  for(let bb = 0; bb < wor.length; bb++){
+  let res = wor[bb].toString();
+  let data = res.toLowerCase().split(" ")
+  for(b = 0; b < data.length; b++){
+    data[b] = data[b].charAt(0).toUpperCase() + data[b].slice(1);
+  }
+  console.log(data.join(" "))
+  }
+})(title)
 
 // c. Sum of all numbers in an array
 
@@ -76,18 +73,15 @@ console.log(""); //This creates a space on the console
 console.log("E. Palindromes:-");
 
 let words = ["Madam", "Amma", "Appa", "Guvi", "Refer", "Malayalam", "School"];
-// let words = ["amma"];
-
-for (e = 0; e < words.length; e++) {
-  (function (w) {
-    let letter = w.toLowerCase(); // All words are converted to lowercase letters
+(function(w){
+  for(let e = 0; e < w.length; e++){
+    let letter = w[e].toLowerCase(); // All words are converted to lowercase letters
     let reverse = letter.split("").reverse().join("");
     if (letter === reverse) {
-      console.log(w);
+      console.log(w[e]);
     }
-  })(words[e]);
-}
-
+  }
+}(words))
 // f. Return median of two sorted arrays of the same size
 console.log(""); //This creates a space on the console
 console.log("F. Median");
