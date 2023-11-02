@@ -15,8 +15,8 @@ for (a = 0; a < arrayNumber.length; a++) {
 console.log(""); //This creates a space on the console
 
 // b. Convert all the strings to title caps in a string array
-let title = ["javaScript iS a programming lanFUage"];
-
+let title = ["javaScript iS a programming lanGUage"];
+console.log("B. String to caps:-");
 (function caps(wor){
   for(let bb = 0; bb < wor.length; bb++){
   let res = wor[bb].toString();
@@ -169,24 +169,19 @@ console.log(oddNumber(arrayNum));
 console.log(""); //This creates a space on the console
 
 // b. Convert all the strings to title caps in a string array
-console.log("B. Convert to capital letters:-");
-let pro = [
-  "html",
-  "css",
-  "javascript",
-  "mongo db",
-  "express",
-  "react",
-  "node",
-];
-let caps = (lan) => {
-  let result = [];
-  for (b of lan) {
-    result.push(b.toUpperCase());
+let lang = ["pyThon iS a programming lanGUage"];
+console.log("B. String to caps:-");
+let caps = (wor) =>{
+  for(let bb = 0; bb < wor.length; bb++){
+  let res = wor[bb].toString();
+  let data = res.toLowerCase().split(" ")
+  for(b = 0; b < data.length; b++){
+    data[b] = data[b].charAt(0).toUpperCase() + data[b].slice(1);
   }
-  return result;
-};
-console.log(caps(pro));
+  return data.join(" ")
+  }
+}
+console.log(caps(lang))
 
 // c. Sum of all numbers in an array
 
@@ -243,6 +238,6 @@ let palindromes = (w) => {
       result.push(e);
     }
   }
-  return result;
+  return result.join(", ");
 };
 console.log(palindromes(word));
